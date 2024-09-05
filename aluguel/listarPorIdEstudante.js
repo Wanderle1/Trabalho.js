@@ -3,7 +3,7 @@ let {aluguel} = require('../data')
 function listarPorIDdoEstudante(req, res){
     let {idEstudante}= req.query
 
-    const lisIDestudante = aluguel.filter(a => a.idEstudante.toLowerCase().includes(idEstudante.toLowerCase()))
+    const lisIDestudante = aluguel.filter(a => a.idEstudante == idEstudante)
 
     if(lisIDestudante.length === 0){
         res.status(404).send('aluguel não encontrado!')

@@ -20,6 +20,9 @@ app.put('/estudante/:id', atualizarEstudantes)
 const exluirEstudantes = require('./estudantes/excluirEstudante')
 app.delete('/estudante/delete/:id', exluirEstudantes)
 
+const listarEstudantePorID = require('./estudantes/listarEstudantePorID')
+app.get('/estudante/id', listarEstudantePorID)
+
 const listarPorNome = require('./estudantes/listarPorNome')
 app.get('/estudante/nome', listarPorNome)
 
@@ -45,6 +48,9 @@ app.put('/atualizar/:id',atualizarLivros)
 const deletarLivros = require('./livros/deletarLivros')
 app.delete('/deletar/:id',deletarLivros)
 
+const listarLivroPorID = require('./livros/listarLivroPorID')
+app.get('/livro/id', listarLivroPorID)
+
 const listarPorTitulo = require('./livros/listarPorTitulo')
 app.get('/livro/titulo',listarPorTitulo)
 
@@ -69,6 +75,9 @@ app.put('/aluguel/:id', atualizarAluguel)
 
 const deletarAluguel = require('./aluguel/deletarAluguel')
 app.delete('/aluguel/:id', deletarAluguel)
+
+const listarAluguelPorID = require('./aluguel/listarAluguelPorID')
+app.get('/aluguel/id', listarAluguelPorID)
 
 const listarPorIDdoEstudante = require('./aluguel/listarPorIdEstudante')
 app.get('/aluguel/idEstudante', listarPorIDdoEstudante)
