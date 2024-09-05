@@ -1,4 +1,4 @@
-let estudantes = require('./data')
+let {estudantes} = require('../data')
 
 function atualizarEstudantes(req, res){
     const {id}= req.params
@@ -10,7 +10,7 @@ function atualizarEstudantes(req, res){
     const estudante = estudantes.find(e => e.id === Number(id))
 
     if(!estudante){
-        res.status(404).send('Estudante não encontrado')
+        return res.status(404).send('Estudante não encontrado')
     }
     estudante.nome= newNome
     estudante.matricula= newMatricula

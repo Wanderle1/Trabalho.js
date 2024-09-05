@@ -1,4 +1,4 @@
-let estudantes = require('./data')
+let {estudantes} = require('../data')
 
 function listarPorAno(req, res){
     let {ano}= req.query

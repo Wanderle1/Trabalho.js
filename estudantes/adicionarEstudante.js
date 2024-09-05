@@ -1,4 +1,4 @@
-let estudantes = require('./data')
+let {estudantes} = require('../data')
 
 function adicionarEstudante(req, res){
     const {nome}= req.body
@@ -7,16 +7,16 @@ function adicionarEstudante(req, res){
     const {ano}= req.body 
 
     if(!nome){
-        res.status(404).send('É necessario um nome!')
+        return res.status(404).send('É necessario um nome!')
     }
     if(!matricula){
-        res.status(404).send('É necessario a matricula!')
+        return res.status(404).send('É necessario a matricula!')
     }
     if(!curso){
-        res.status(404).send('É necessario um curso!')
+        return res.status(404).send('É necessario um curso!')
     }
     if(!ano){
-        res.status(404).send('É necessaro um ano!')
+        return res.status(404).send('É necessaro um ano!')
     }
 
     let id=1

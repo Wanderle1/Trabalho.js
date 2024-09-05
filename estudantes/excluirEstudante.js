@@ -1,4 +1,4 @@
-let estudantes = require('./data')
+let {estudantes} = require('../data')
 
 function exluirEstudantes(req, res){
     const {id}= req.params
@@ -9,7 +9,7 @@ function exluirEstudantes(req, res){
         res.status(404).send('Estudante não encontrado')
     }
 
-    const estudanteDeletado = estudantes.splice(index, 1)[0]
+    estudantes.splice(index, 1)[0]
 
     res.status(200).send('Excluido com sucesso!')
 }
